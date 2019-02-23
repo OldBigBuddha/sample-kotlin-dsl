@@ -5,13 +5,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion(28)
+    compileSdkVersion(Versions.compileSdk)
     defaultConfig {
         applicationId = "net.oldbigbuddha.sample.samplekotlindsl"
-        minSdkVersion(21)
-        targetSdkVersion(28)
-        versionCode = 1
-        versionName = "1.0"
+        minSdkVersion(Versions.minSdk)
+        targetSdkVersion(Versions.targetSdk)
+        versionCode = Versions.code
+        versionName = Versions.name
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
