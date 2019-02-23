@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
-    id("kotlin-android")
-    id("kotlin-android-extensions")
+    kotlin("android")
+    kotlin("android.extensions")
 }
 
 android {
@@ -24,11 +24,11 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.21")
-    implementation("androidx.appcompat:appcompat:1.1.0-alpha02")
-    implementation("androidx.core:core-ktx:1.1.0-alpha04")
-    implementation("androidx.constraintlayout:constraintlayout:1.1.3")
-    testImplementation("junit:junit:4.12")
-    androidTestImplementation("androidx.test:runner:1.1.2-alpha01")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.1.2-alpha01")
+    implementation(Dependencies.Kotlin.stdLib)
+    implementation(Dependencies.AndroidX.appCompat)
+    implementation(Dependencies.AndroidX.ktx)
+    implementation(Dependencies.AndroidX.constraintLayout)
+    testImplementation(Dependencies.Test.jUnit)
+    androidTestImplementation(Dependencies.AndroidX.Test.runner)
+    androidTestImplementation(Dependencies.AndroidX.Test.espresso)
 }
